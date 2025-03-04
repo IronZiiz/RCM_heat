@@ -28,7 +28,11 @@ To = st.number_input("Temperatura inicial (°C)", value=30.0, step=1.0)
 
 rho = st.number_input("Densidade do cobre (kg/m³)", value=8960.0, step=10.0)
 cp = st.number_input("Calor específico do cobre (J/kgK)", value=385.0, step=1.0)
+<<<<<<< HEAD
 ks = st.number_input("Condutividade térmica do silicone (W/mK)", value=0.2, step=0.01)
+=======
+ks = st.number_input("Condutividade térmica do silicone (W/mK)", value=0.5, step=0.01)
+>>>>>>> b8b6829 (First version)
 
 R = st.number_input("Raio do fio de cobre (mm)", value=0.44, step=0.01)
 Ls = st.number_input("Espessura da camada de silicone (mm)", value=0.8, step=0.01)
