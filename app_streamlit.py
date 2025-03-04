@@ -28,7 +28,6 @@ To = st.number_input("Temperatura inicial (°C)", value=30.0, step=1.0)
 
 rho = st.number_input("Densidade do cobre (kg/m³)", value=8960.0, step=10.0)
 cp = st.number_input("Calor específico do cobre (J/kgK)", value=385.0, step=1.0)
-ks = st.number_input("Condutividade térmica do silicone (W/mK)", value=0.2, step=0.01)
 ks = st.number_input("Condutividade térmica do silicone (W/mK)", value=0.5, step=0.01)
 
 
