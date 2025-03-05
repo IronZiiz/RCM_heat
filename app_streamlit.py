@@ -7,12 +7,17 @@ def celsius_to_kelvin(celsius):
 def mm_to_m(millimeters):
     return millimeters / 1000
 
+
+    
+
+
+    return R + Ls
 def time_to_target(Ta, Tt, To, rho, cp, ks, R, Ls):
     Ta = celsius_to_kelvin(Ta)
     Tt = celsius_to_kelvin(Tt)
     To = celsius_to_kelvin(To)
+    R = (R - 2*Ls)/2
     R = mm_to_m(R)
-    Ls = mm_to_m(Ls)
     t = ((rho * cp * R**2 * m.log((Ls + R) / R) * m.log((Tt - To) / (Tt - Ta))) /(2*ks))
     t = round(t, 4)
     return t
@@ -31,7 +36,7 @@ cp = st.number_input("Calor específico do cobre (J/kgK)", value=385.0, step=1.0
 ks = st.number_input("Condutividade térmica do silicone (W/mK)", value=0.5, step=0.01)
 
 
-R = st.number_input("Raio do fio de cobre (mm)", value=0.44, step=0.01)
+R = st.number_input("Diametro do fio (mm)", value=0.44, step=0.01)
 Ls = st.number_input("Espessura da camada de silicone (mm)", value=0.8, step=0.01)
 
 # Botão para calcular o tempo
