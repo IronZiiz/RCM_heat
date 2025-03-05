@@ -12,9 +12,11 @@ def time_to_target(Ta, Tt, To, rho, cp, ks, D, Ls):
     Ta = celsius_to_kelvin(Ta)
     Tt = celsius_to_kelvin(Tt)
     To = celsius_to_kelvin(To)
-    D = (D - 2*Ls)/2
-    D = mm_to_m(D)
-    t = ((rho * cp * D**2 * m.log((Ls + D) / D) * m.log((Tt - To) / (Tt - Ta))) /(2*ks))
+
+    radius = (D - 2 * Ls) / 2
+    radius_m = mm_to_m(radius)
+
+    t = ((rho * cp * radius_m**2 * m.log((Ls + radius_m) / radius_m) * m.log((Tt - To) / (Tt - Ta))) /(2*ks))
     t = round(t, 4)
     return t
 
