@@ -13,7 +13,7 @@ def time_to_target(Ta, Tt, To, rho, cp, ks, D, Ls):
     Tt = celsius_to_kelvin(Tt)
     To = celsius_to_kelvin(To)
     D = (D - 2*Ls)/2
-    R = mm_to_m(R)
+    D = mm_to_m(D)
     t = ((rho * cp * R**2 * m.log((Ls + R) / R) * m.log((Tt - To) / (Tt - Ta))) /(2*ks))
     t = round(t, 4)
     return t
